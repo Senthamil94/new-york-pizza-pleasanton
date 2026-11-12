@@ -42,6 +42,6 @@ ASSETS
   assets/img/            logo, photos, menu photos (from the live site and boons menu)
 
 The "Open now / Closed" badges are calculated live in Pacific Time from these hours:
-  Sun–Thu 10 AM–10:30 PM, Fri–Sat 10 AM–11:30 PM  (edit HOURS at the top of main.js)
+  Sun–Thu 10 AM–10:30 PM, Fri–Sat 10 AM–12 AM  (edit HOURS at the top of main.js)
 
 Powered by boons.io

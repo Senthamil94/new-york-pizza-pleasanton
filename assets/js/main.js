@@ -8,7 +8,7 @@
 
   /* ---------- Open / closed status (Pacific Time) ---------- */
   // minutes from midnight: [open, close]; 0 = Sunday
-  var HOURS = { 0: [600, 1350], 1: [600, 1350], 2: [600, 1350], 3: [600, 1350], 4: [600, 1350], 5: [600, 1410], 6: [600, 1410] };
+  var HOURS = { 0: [600, 1350], 1: [600, 1350], 2: [600, 1350], 3: [600, 1350], 4: [600, 1350], 5: [600, 1440], 6: [600, 1440] };
   function fmt(min) {
     var h = Math.floor(min / 60) % 24, m = min % 60, ap = h >= 12 ? 'PM' : 'AM', hh = h % 12 || 12;
     return hh + (m ? ':' + (m < 10 ? '0' : '') + m : '') + ' ' + ap;
