@@ -1226,3 +1226,30 @@ address { font-style: normal; }
   .c-card span.big { font-size: 1rem; }
   .c-card .way-icon { width: 44px; height: 44px; border-radius: 14px; }
 }
+
+/* ---------- Promo flyer ---------- */
+#flyer {
+  position: fixed; inset: 0; z-index: 10000;
+  background: rgba(23, 17, 15, .78);
+  display: none; align-items: center; justify-content: center;
+  padding: 28px 18px;
+}
+#flyer.on { display: flex; }
+.flyer-card { position: relative; width: min(92vw, 480px); }
+.flyer-card a { display: block; }
+.flyer-card img {
+  width: 100%; height: auto; display: block;
+  border-radius: 18px; box-shadow: 0 24px 70px rgba(0, 0, 0, .45);
+}
+#flyer-close {
+  position: absolute; top: -14px; right: -14px;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--red, #E01A35); color: #fff;
+  font-size: 26px; line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+  border: 0; cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .35);
+}
+#flyer-close:hover,
+#flyer-close:focus-visible { background: var(--ink, #17110F); outline: 2px solid #fff; outline-offset: 2px; }
+body.flyer-open { overflow: hidden; }

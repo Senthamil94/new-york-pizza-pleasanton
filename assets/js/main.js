@@ -209,4 +209,26 @@
 
   /* ---------- Footer year ---------- */
   $all('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+
+  /* ---------- Promo flyer ---------- */
+  // Set FLYER_ENABLED to false to hide it without removing the image.
+  var FLYER_ENABLED = true;
+  var flyer = d.getElementById('flyer');
+  var flyerClose = d.getElementById('flyer-close');
+  function closeFlyer() {
+    if (!flyer) return;
+    flyer.classList.remove('on');
+    flyer.hidden = true;
+    d.body.classList.remove('flyer-open');
+  }
+  function openFlyer() {
+    if (!flyer || !FLYER_ENABLED) return;
+    flyer.hidden = false;
+    flyer.classList.add('on');
+    d.body.classList.add('flyer-open');
+  }
+  if (flyerClose) flyerClose.addEventListener('click', closeFlyer);
+  if (flyer) flyer.addEventListener('click', function (e) { if (e.target === flyer) closeFlyer(); });
+  d.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeFlyer(); });
+  if (FLYER_ENABLED) setTimeout(openFlyer, still() ? 0 : 500);
 })();
