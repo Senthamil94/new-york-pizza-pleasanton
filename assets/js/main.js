@@ -212,7 +212,7 @@
 
   /* ---------- Promo flyer ---------- */
   // Set FLYER_ENABLED to false to hide it without removing the image.
-  var FLYER_ENABLED = true;
+  var FLYER_ENABLED = true; // Thanksgiving Week Special — THANKS10
   var flyer = d.getElementById('flyer');
   var flyerClose = d.getElementById('flyer-close');
   function closeFlyer() {
